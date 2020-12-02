@@ -10,5 +10,3 @@ main = do
 
   print $ find (\a -> fst a == 2020) (pairs numbers)
   print $ find (\a -> fst a == 2020) (triplets numbers)
-
-  return ()
