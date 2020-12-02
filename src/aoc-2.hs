@@ -1,6 +1,6 @@
 import qualified Data.Text as T
 
-countValidPasswordsOne passwords = do
+countNormalPasswords passwords = do
   sum $
     map
       ( \p -> do
@@ -11,7 +11,7 @@ countValidPasswordsOne passwords = do
       )
       passwords
 
-countValidPasswordsTwo passwords = do
+countTobogganPasswords passwords = do
   sum $
     map
       ( \p -> do
@@ -35,10 +35,9 @@ main = do
                   max = minmax !! 1
                   char = head (parts !! 1)
                   password = parts !! 2
-                  test = password !! min
               (min, max, char, password)
           )
           rows
 
-  print $ countValidPasswordsOne passwords
-  print $ countValidPasswordsTwo passwords
+  print $ "normal passwords: " ++ show (countNormalPasswords passwords)
+  print $ "toboggan passwords: " ++ show (countTobogganPasswords passwords)
