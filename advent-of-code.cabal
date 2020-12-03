@@ -21,6 +21,11 @@ executable aoc-2
   main-is:              aoc-2.hs
   build-depends:        base
 
+executable aoc-3
+  hs-source-dirs:       src
+  main-is:              aoc-3.hs
+  build-depends:        base
+
 source-repository head
   type:     git
   location: git://github.com/Husenap/advent-of-code.git
