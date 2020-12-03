@@ -1,5 +1,6 @@
 import qualified Data.Text as T
 
+countNormalPasswords :: (Num a, Eq c) => [(Int, Int, c, [c])] -> a
 countNormalPasswords passwords = do
   sum $
     map
@@ -11,6 +12,7 @@ countNormalPasswords passwords = do
       )
       passwords
 
+countTobogganPasswords :: (Num a, Eq c) => [(Int, Int, c, [c])] -> a
 countTobogganPasswords passwords = do
   sum $
     map
@@ -22,6 +24,7 @@ countTobogganPasswords passwords = do
       )
       passwords
 
+main :: IO ()
 main = do
   contents <- readFile "input/2"
 

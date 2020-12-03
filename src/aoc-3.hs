@@ -1,17 +1,17 @@
+countTreeHits :: (Integral a2, Num a1) => Int -> a2 -> [[Char]] -> a1
 countTreeHits dx dy treeMap = do
   let pairs = zip [0 ..] treeMap
       filteredPairs = filter (\(i, _) -> mod i dy == 0) pairs
-      filteredMap = map snd filteredPairs
-      indexedMap = zip [0 ..] filteredMap
+      indexedMap = zip [0 ..] (map snd filteredPairs)
       hitMap =
         map
           ( \(i, c) -> do
               if c !! mod (i * dx) (length c) == '#' then 1 else 0
           )
           indexedMap
-
   sum hitMap
 
+main :: IO ()
 main = do
   contents <- readFile "input/3"
 
@@ -30,5 +30,3 @@ main = do
   print $ "slope 1 2:" ++ show treeHits12
 
   print $ "product of slopes: " ++ show product
-
-  return ()

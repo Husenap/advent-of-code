@@ -19,7 +19,8 @@ executable aoc-1
 executable aoc-2
   hs-source-dirs:       src
   main-is:              aoc-2.hs
-  build-depends:        base
+  build-depends:        base,
+                        text
 
 executable aoc-3
   hs-source-dirs:       src
