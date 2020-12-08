@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "advent-of-code:lib"
+
+    - path: "./test"
+      component: "advent-of-code:test:test"

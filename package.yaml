@@ -1,0 +1,20 @@
+name:         advent-of-code
+version:      0.1.0.0
+
+dependencies:
+  - base
+
+library:
+  source-dirs:     src
+  ghc-options:     -Wall
+  dependencies:
+    - text
+    - split
+
+tests:
+  test:
+    main:         Spec.hs
+    source-dirs:  test
+    dependencies:
+      - advent-of-code
+      - hspec
