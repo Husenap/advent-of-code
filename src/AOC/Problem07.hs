@@ -13,9 +13,8 @@ canContainShinyGoldBag :: [(String, [String])] -> (String, [String]) -> Bool
 canContainShinyGoldBag definitions bag
   | "shiny gold" `elem` snd bag = True
   | otherwise =
-    any
-      (canContainShinyGoldBag definitions)
-      [ fromJust d
+    or
+      [ canContainShinyGoldBag definitions (fromJust d)
         | c <- snd bag,
           let d = find (\b -> fst b == c) definitions,
           isJust d
