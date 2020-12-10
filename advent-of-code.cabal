@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fc0ac12f9fe98b4dd498eaf6bb75ce08b9f451382c82e4b8e3547a640cd81085
+-- hash: 48c56d5bcc32e449cfa393e8d515d920ef099a3fbff3253b7cb0693135634a91
 
 name:           advent-of-code
 version:        0.1.0.0
@@ -23,6 +23,7 @@ library
       AOC.Problem07
       AOC.Problem08
       AOC.Problem09
+      AOC.Problem10
       Utils
   other-modules:
       Paths_advent_of_code
@@ -30,7 +31,8 @@ library
       src
   ghc-options: -Wall
   build-depends:
-      base
+      MemoTrie
+    , base
     , split
     , text
   default-language: Haskell2010
@@ -48,6 +50,7 @@ test-suite test
       AOC.Problem07Spec
       AOC.Problem08Spec
       AOC.Problem09Spec
+      AOC.Problem10Spec
       SpecHelper
       Paths_advent_of_code
   hs-source-dirs:

@@ -10,10 +10,9 @@ calculateNumberOfBags definitions current = case lookup current definitions of
   Nothing -> 0
 
 canContainShinyGoldBag :: [(String, [String])] -> (String, [String]) -> Bool
-canContainShinyGoldBag definitions bag
-  | "shiny gold" `elem` snd bag = True
-  | otherwise =
-    or
+canContainShinyGoldBag definitions bag =
+  "shiny gold" `elem` snd bag
+    || or
       [ canContainShinyGoldBag definitions (fromJust d)
         | c <- snd bag,
           let d = find (\b -> fst b == c) definitions,

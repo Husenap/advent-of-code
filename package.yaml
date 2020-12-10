@@ -10,6 +10,7 @@ library:
   dependencies:
     - text
     - split
+    - MemoTrie
 
 tests:
   test:
