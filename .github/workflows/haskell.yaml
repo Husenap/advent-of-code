@@ -1,0 +1,27 @@
+name: Haskell CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Haskell Stack 
+        uses: actions/setup-haskell@v1.1
+        with:
+          enable-stack: true
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+      
+      - name: Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.stack
+          key: ${{runner.os}}-stack
+
+      - name: Test
+        run: stack test
