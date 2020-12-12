@@ -1,4 +1,4 @@
-module AOC.Problem03 where
+module AOC.Problem03 (part1, part2) where
 
 countTreeHits :: Int -> Int -> [String] -> Int
 countTreeHits dx dy treeMap = do

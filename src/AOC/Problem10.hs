@@ -1,4 +1,4 @@
-module AOC.Problem10 where
+module AOC.Problem10 (part1, part2) where
 
 import Data.List
 import Data.MemoTrie

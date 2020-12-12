@@ -1,4 +1,4 @@
-module AOC.Problem08 where
+module AOC.Problem08 (part1, part2) where
 
 import Data.Maybe
 

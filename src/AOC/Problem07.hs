@@ -1,4 +1,4 @@
-module AOC.Problem07 where
+module AOC.Problem07 (part1, part2) where
 
 import Data.List
 import Data.List.Split

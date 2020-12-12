@@ -1,4 +1,4 @@
-module AOC.Problem04 where
+module AOC.Problem04 (part1, part2) where
 
 import Data.Ix
 import Data.List

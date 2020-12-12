@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 48c56d5bcc32e449cfa393e8d515d920ef099a3fbff3253b7cb0693135634a91
+-- hash: 43472d9c112b292f0aa944df3501a5425e272dcd444fdc1983694b7d575ddd23
 
 name:           advent-of-code
 version:        0.1.0.0
@@ -24,6 +24,11 @@ library
       AOC.Problem08
       AOC.Problem09
       AOC.Problem10
+      AOC.Problem11
+      AOC.Problem12
+      AOC.Problem12.Part1
+      AOC.Problem12.Part2
+      AOC.Problem12.Shared
       Utils
   other-modules:
       Paths_advent_of_code
@@ -51,6 +56,8 @@ test-suite test
       AOC.Problem08Spec
       AOC.Problem09Spec
       AOC.Problem10Spec
+      AOC.Problem11Spec
+      AOC.Problem12Spec
       SpecHelper
       Paths_advent_of_code
   hs-source-dirs:

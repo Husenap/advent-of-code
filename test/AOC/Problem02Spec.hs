@@ -1,4 +1,4 @@
-module AOC.Problem02Spec where
+module AOC.Problem02Spec (spec) where
 
 import AOC.Problem02
 import SpecHelper

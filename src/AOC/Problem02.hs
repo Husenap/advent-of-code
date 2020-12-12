@@ -1,6 +1,6 @@
 {-# LANGUAGE RecordWildCards #-}
 
-module AOC.Problem02 where
+module AOC.Problem02 (part1, part2) where
 
 import qualified Data.Text as T
 
