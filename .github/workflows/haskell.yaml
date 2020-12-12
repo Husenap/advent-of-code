@@ -23,7 +23,7 @@ jobs:
           path: ~/.stack
           key: ${{runner.os}}-stack
 
-      - name: Test
+      - name: Build
         run: stack build --test --no-run-tests
 
       - name: Test
