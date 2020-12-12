@@ -24,4 +24,7 @@ jobs:
           key: ${{runner.os}}-stack
 
       - name: Test
+        run: stack build --test --no-run-tests
+
+      - name: Test
         run: stack test
