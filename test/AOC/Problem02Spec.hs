@@ -8,9 +8,15 @@ spec = do
   describe "problem 2" $ do
     context "part 1" $ do
       it "should calculate the number of normal passwords" $ do
-        contents <- readFile "input/2"
-        part1 contents `shouldBe` 477
+        runTestCases
+          part1
+          [ TestCase "input/02/0" 477,
+            TestCase "input/02/1" 2
+          ]
     context "part 2" $ do
       it "should calculate the number of toboggan passwords" $ do
-        contents <- readFile "input/2"
-        part2 contents `shouldBe` 686
+        runTestCases
+          part2
+          [ TestCase "input/02/0" 686,
+            TestCase "input/02/1" 1
+          ]

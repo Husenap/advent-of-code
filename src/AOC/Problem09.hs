@@ -16,8 +16,8 @@ findNumberThatBreaksRule numbers preambleSize = do
     then findNumberThatBreaksRule (tail numbers) preambleSize
     else number
 
-part1 :: String -> Int -> Int
-part1 contents preambleSize = do
+part1 :: Int -> String -> Int
+part1 preambleSize contents = do
   let numbers = parseData contents
   findNumberThatBreaksRule numbers preambleSize
 
@@ -37,8 +37,8 @@ findEncryptionWeakness numbers invalidNumber = do
     then 0
     else head solution
 
-part2 :: String -> Int -> Int
-part2 contents preambleSize = do
+part2 :: Int -> String -> Int
+part2 preambleSize contents = do
   let numbers = parseData contents
       invalidNumber = findNumberThatBreaksRule numbers preambleSize
   findEncryptionWeakness numbers invalidNumber

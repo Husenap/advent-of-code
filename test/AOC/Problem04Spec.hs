@@ -8,9 +8,17 @@ spec = do
   describe "problem 4" $ do
     context "part 1" $ do
       it "should calculate the number of passports with correct fields" $ do
-        contents <- readFile "input/4"
-        part1 contents `shouldBe` 247
+        runTestCases
+          part1
+          [ TestCase "input/04/0" 247,
+            TestCase "input/04/1" 2,
+            TestCase "input/04/2" 8
+          ]
     context "part 2" $ do
       it "should calculate the number of valid passports" $ do
-        contents <- readFile "input/4"
-        part2 contents `shouldBe` 145
+        runTestCases
+          part2
+          [ TestCase "input/04/0" 145,
+            TestCase "input/04/1" 2,
+            TestCase "input/04/2" 4
+          ]

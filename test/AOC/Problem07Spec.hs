@@ -8,9 +8,16 @@ spec = do
   describe "problem 7" $ do
     context "part 1" $ do
       it "should calculate the number of bag colors that can contain a shiny gold bag" $ do
-        contents <- readFile "input/7"
-        part1 contents `shouldBe` 370
+        runTestCases
+          part1
+          [ TestCase "input/07/0" 370,
+            TestCase "input/07/1" 4
+          ]
     context "part 2" $ do
       it "should calculate the number of bags required inside a single shiny gold bag" $ do
-        contents <- readFile "input/7"
-        part2 contents `shouldBe` 29547
+        runTestCases
+          part2
+          [ TestCase "input/07/0" 29547,
+            TestCase "input/07/1" 32,
+            TestCase "input/07/2" 126
+          ]

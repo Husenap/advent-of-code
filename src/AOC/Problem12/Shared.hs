@@ -23,4 +23,5 @@ toAction _ = F
 data Instruction = Instruction Action Int deriving (Show)
 
 parseData :: String -> [Instruction]
-parseData contents = [Instruction (toAction action) (read value) | (action : value) <- lines contents]
+parseData contents =
+  [Instruction (toAction action) (read value) | (action : value) <- lines contents]

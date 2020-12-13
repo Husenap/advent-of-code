@@ -8,9 +8,15 @@ spec = do
   describe "problem 3" $ do
     context "part 1" $ do
       it "should calculate the number of tree collisions for one slope" $ do
-        contents <- readFile "input/3"
-        part1 contents `shouldBe` 252
+        runTestCases
+          part1
+          [ TestCase "input/03/0" 252,
+            TestCase "input/03/1" 7
+          ]
     context "part 2" $ do
       it "should calculate the product of tree collisions of multiple slopes" $ do
-        contents <- readFile "input/3"
-        part2 contents `shouldBe` 2608962048
+        runTestCases
+          part2
+          [ TestCase "input/03/0" 2608962048,
+            TestCase "input/03/1" 336
+          ]

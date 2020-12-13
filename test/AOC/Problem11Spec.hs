@@ -8,5 +8,8 @@ spec = do
   describe "problem 11" $ do
     context "part 1" $ do
       it "should calculate the number of occupied seats after the simulation" $ do
-        contents <- readFile "input/11"
-        part1 contents `shouldBe` 2273
+        runTestCases
+          part1
+          [ TestCase "input/11/0" 2273,
+            TestCase "input/11/1" 37
+          ]

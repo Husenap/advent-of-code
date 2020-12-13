@@ -8,9 +8,13 @@ spec = do
   describe "problem 5" $ do
     context "part 1" $ do
       it "should calculate the maximum Seat Id" $ do
-        contents <- readFile "input/5"
-        part1 contents `shouldBe` 806
+        runTestCases
+          part1
+          [ TestCase "input/05/0" 806
+          ]
     context "part 2" $ do
       it "should calculate our Seat Id" $ do
-        contents <- readFile "input/5"
-        part2 contents `shouldBe` 562
+        runTestCases
+          part2
+          [ TestCase "input/05/0" 562
+          ]
